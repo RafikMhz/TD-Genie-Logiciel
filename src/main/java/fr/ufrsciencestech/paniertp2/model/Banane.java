@@ -7,6 +7,7 @@ package fr.ufrsciencestech.paniertp2.model;
 public class Banane extends FruitSimple implements Fruit {
  
 
+    
     public Banane(double prix, String origine)
     {
         super(prix,origine);

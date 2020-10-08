@@ -4,7 +4,7 @@ package fr.ufrsciencestech.paniertp2.model;
  *
  * @author eb227427
  */
-public class Banane extends FruitSimple implements Fruit {
+public class Banane extends FruitSimple {
  
 
     

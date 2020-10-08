@@ -7,10 +7,9 @@ package fr.ufrsciencestech.paniertp2;
 
 import fr.ufrsciencestech.paniertp2.controler.Controleur;
 import fr.ufrsciencestech.paniertp2.model.Modele;
-import fr.ufrsciencestech.paniertp2.model.Panier;
-import fr.ufrsciencestech.paniertp2.view.*;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import fr.ufrsciencestech.paniertp2.view.VueConsole;
+import fr.ufrsciencestech.paniertp2.view.VueG;
+import fr.ufrsciencestech.paniertp2.view.VueGraphAWT;
 
 /**
  *

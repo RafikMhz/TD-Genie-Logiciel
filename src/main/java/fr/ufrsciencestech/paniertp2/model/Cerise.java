@@ -4,7 +4,7 @@ package fr.ufrsciencestech.paniertp2.model;
  *
  * @author eb227427
  */
-public class Cerise extends FruitSimple implements Fruit {
+public class Cerise extends FruitSimple {
 
     
     public Cerise(double prix, String origine)

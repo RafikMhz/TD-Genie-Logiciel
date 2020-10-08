@@ -10,8 +10,7 @@ public class Ananas implements Fruit{
         this.origine="Bresil";
     }
     
-    public Ananas(double prix, String origine)  //modifie par C. Roudet
-    {
+    public Ananas(double prix, String origine){
 	if(prix < 0)
 	    this.prix = -prix;  //une solution possible pour interdire les prix negatifs
 	else

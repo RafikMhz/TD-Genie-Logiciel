@@ -7,7 +7,7 @@ import fr.ufrsciencestech.paniertp2.controler.*;
 
 /**
  *
- * @author roudet
+ * @author eb227427
  */
 public class Panier {
     private ArrayList<Fruit> fruits;  //attribut pour stocker les fruits
@@ -15,8 +15,6 @@ public class Panier {
 
 	
     //groupe 1
-
-
 
     public Panier(int contenanceMax){  //initialise un panier vide ayant une certaine contenance maximale (precisee en parametre)
         this.contenanceMax = abs(contenanceMax);
@@ -108,11 +106,17 @@ public class Panier {
 		i++ ;					//E
         }
     }
-        
-    //groupe 8    
+
+    //groupe 8
     @Override
     public boolean equals(Object o){  ///predicat pour tester si 2 paniers sont equivalents : s'ils contiennent exactement les memes fruits
-        return false;
+        if (o == null || getClass() != o.getClass()) return false;
+        Panier p = (Panier)o;
+        int length = Math.min(p.getTaillePanier(), this.getTaillePanier());
+        for (int i = 0; i < length; i++) {
+            if (!p.getFruit(i).equals(this.getFruit(i))) return false;
+        }
+        return true;
     }
     
     //tests

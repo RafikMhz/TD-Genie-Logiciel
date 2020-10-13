@@ -6,7 +6,6 @@ package fr.ufrsciencestech.paniertp2.model;
  */
 public class Cerise extends FruitSimple {
 
-    
     public Cerise(double prix, String origine)
     {
         super(prix,origine);
@@ -16,10 +15,14 @@ public class Cerise extends FruitSimple {
         return "Cerise de " + origine + " a " + prix + " euros";
     }
     
-   
     public boolean isSeedless() {  //predicat indiquant qu'une Cerise n'a pas de pepins
         return true;
     }
+
+    public static void main (String[] args){
+        //Ecrire ici vos tests
+	System.out.println("premier test Cerise");
+   }
 }
 
 

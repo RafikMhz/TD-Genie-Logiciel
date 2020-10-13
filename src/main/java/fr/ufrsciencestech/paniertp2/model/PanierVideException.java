@@ -7,6 +7,6 @@ package fr.ufrsciencestech.paniertp2.model;
 public class PanierVideException extends Exception {
     public PanierVideException()
     {
-	super("Suppression impossible car le panier est vide !");
+	    super("Suppression impossible car le panier est vide !");
     }
 }

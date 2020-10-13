@@ -11,15 +11,15 @@ public abstract class  FruitSimple implements Fruit{
 
     public FruitSimple(double prix, String origine)
     {
-	if(prix < 0)
-	    this.prix = -prix;  //une solution possible pour interdire les prix negatifs
-	else
-	    this.prix = prix;
+        if(prix < 0)
+            this.prix = -prix;  //une solution possible pour interdire les prix negatifs
+        else
+            this.prix = prix;
 
-	if(origine.equals(""))
-            this.origine = "Non Renseigné";  
-	else
-            this.origine = origine;
+        if(origine.equals(""))
+                this.origine = "Non Renseigné";  
+        else
+                this.origine = origine;
     }
 
     
@@ -40,17 +40,21 @@ public abstract class  FruitSimple implements Fruit{
     }
 
     @Override
-    public String toString(){
-        return "FruitSimple de " + origine + " a " + prix + " euros";
-    }
-
-    @Override
-    public boolean equals(Object o){  //predicat pour tester si 2 oranges sont equivalentes
+    public boolean equals(Object o){  
         if(o != null && getClass() == o.getClass()){
-            Cerise fr = (Cerise) o;
+            FruitSimple fr = (FruitSimple) o;
             return (prix == fr.prix && origine.equals(fr.origine));
         }
         return false;
+    }
+
+    @Override
+    public boolean isSeedless() {  //predicat indiquant qu'un FruitSimple peu avoir des pepins comme l'orange
+        return false;
+    }
+    @Override
+    public String toString(){
+        return "FruitSimple de " + origine + " a " + prix + " euros";
     }
 
 }

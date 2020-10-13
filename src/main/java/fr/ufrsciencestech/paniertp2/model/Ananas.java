@@ -11,14 +11,15 @@ public class Ananas implements Fruit{
     }
     
     public Ananas(double prix, String origine){
-	if(prix < 0)
-	    this.prix = -prix;  //une solution possible pour interdire les prix negatifs
-	else
-	    this.prix = prix;
+        
+        if(prix < 0)
+            this.prix = -prix;  //une solution possible pour interdire les prix negatifs
+        else
+            this.prix = prix;
 
-	if(origine.equals(""))
+        if(origine.equals(""))
             this.origine = "Bresil";  //Espagne par défaut
-	else
+        else
             this.origine = origine;   
     }
 
@@ -56,18 +57,6 @@ public class Ananas implements Fruit{
         return true;
     }
 
-
-    public static void main (String[] args){
-        //Ecrire ici vos tests
-	System.out.println("premier test Ananas");
-	Orange o = new Orange();
-	System.out.println(o.getPrix());
-	o.setPrix(-2.0);
-	System.out.println(o.getPrix());
-	Orange o2 = new Orange(-3.0, "RDC");
-	
-	System.out.println(o2.getPrix());
-	
-   }
+   
 }
 

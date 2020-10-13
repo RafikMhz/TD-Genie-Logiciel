@@ -1,9 +1,8 @@
 package fr.ufrsciencestech.paniertp2.model;
 
 import static java.lang.Math.abs;
-import java.util.*;
-import fr.ufrsciencestech.paniertp2.view.*;
-import fr.ufrsciencestech.paniertp2.controler.*;
+
+import java.util.ArrayList;
 
 /**
  *

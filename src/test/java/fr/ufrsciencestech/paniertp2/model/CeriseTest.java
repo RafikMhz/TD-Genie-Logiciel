@@ -5,12 +5,10 @@
  */
 package fr.ufrsciencestech.paniertp2.model;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
+
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 /**
  *
@@ -27,91 +25,16 @@ public class CeriseTest extends FruitSimpleTest{
     }    
     //inutile de redéfinir la méthode testGetPrix() ici}
     
-    
-    public CeriseTest() {
-    }
-    
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
-    @Before
-    public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
-    }
-
-    /**
-     * Test of getPrix method, of class Cerise.
-     */
-    @Test
-    public void testGetPrix() {
-        System.out.println("getPrix");
-        Cerise instance = new Cerise();
-        double expResult = 0.0;
-        double result = instance.getPrix();
-        assertEquals(expResult, result, 0.0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of setPrix method, of class Cerise.
-     */
-    @Test
-    public void testSetPrix() {
-        System.out.println("setPrix");
-        double prix = 0.0;
-        Cerise instance = new Cerise();
-        instance.setPrix(prix);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of getOrigine method, of class Cerise.
-     */
-    @Test
-    public void testGetOrigine() {
-        System.out.println("getOrigine");
-        Cerise instance = new Cerise();
-        String expResult = "";
-        String result = instance.getOrigine();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of setOrigine method, of class Cerise.
-     */
-    @Test
-    public void testSetOrigine() {
-        System.out.println("setOrigine");
-        String origine = "";
-        Cerise instance = new Cerise();
-        instance.setOrigine(origine);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
     /**
      * Test of toString method, of class Cerise.
      */
     @Test
     public void testToString() {
         System.out.println("toString");
-        Cerise instance = new Cerise();
-        String expResult = "";
+        Cerise instance = new Cerise(14,"");
+        String expResult = "Cerise de " + "" + " a " + 14 + " euros";
         String result = instance.toString();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
@@ -122,11 +45,10 @@ public class CeriseTest extends FruitSimpleTest{
     public void testEquals() {
         System.out.println("equals");
         Object o = null;
-        Cerise instance = new Cerise();
+        Cerise instance = new Cerise(12,"Russie");
         boolean expResult = false;
         boolean result = instance.equals(o);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
@@ -136,11 +58,10 @@ public class CeriseTest extends FruitSimpleTest{
     @Test
     public void testIsSeedless() {
         System.out.println("isSeedless");
-        Cerise instance = new Cerise();
+        Cerise instance = new Cerise(12,"Russie");
         boolean expResult = false;
         boolean result = instance.isSeedless();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
@@ -152,7 +73,6 @@ public class CeriseTest extends FruitSimpleTest{
         System.out.println("main");
         String[] args = null;
         Cerise.main(args);
-        // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
     

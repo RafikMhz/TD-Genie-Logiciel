@@ -1,12 +1,11 @@
 package fr.ufrsciencestech.paniertp2.model;
 
-import fr.ufrsciencestech.paniertp2.model.Orange;
-import fr.ufrsciencestech.paniertp2.model.Panier;
-import fr.ufrsciencestech.paniertp2.model.PanierPleinException;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
-import org.junit.*;
-import static org.junit.Assert.*;
-import static org.mockito.Mockito.*;
+import org.junit.Test;
 
 public class PanierTest {
     @Test

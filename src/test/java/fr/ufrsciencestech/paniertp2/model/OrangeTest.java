@@ -25,39 +25,21 @@ public class OrangeTest extends FruitSimpleTest{
     FruitSimple createFruitNull(){  
         return null;    
     }    
+        
     //inutile de redéfinir la méthode testGetPrix() ici}
     
-    
-    public OrangeTest() {
-    }
-    
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
-    @Before
-    public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
-    }
-
+  
     /**
      * Test of getPrix method, of class Orange.
      */
     @Test
     public void testGetPrix() {
         System.out.println("getPrix");
-        Orange instance = new Orange();
-        double expResult = 0.0;
+        Orange instance = new Orange(2.0,"Suisse");
+        double expResult = 2.0;
         double result = instance.getPrix();
-        assertEquals(expResult, result, 0.0);
-        // TODO review the generated test code and remove the default call to fail.
+        assertEquals(expResult, result, 2.0);
+
         fail("The test case is a prototype.");
     }
 
@@ -67,10 +49,9 @@ public class OrangeTest extends FruitSimpleTest{
     @Test
     public void testSetPrix() {
         System.out.println("setPrix");
-        double prix = 0.0;
-        Orange instance = new Orange();
+        double prix = 0.4;
+        Orange instance = new Orange(0,"Algerie");
         instance.setPrix(prix);
-        // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
@@ -80,11 +61,10 @@ public class OrangeTest extends FruitSimpleTest{
     @Test
     public void testGetOrigine() {
         System.out.println("getOrigine");
-        Orange instance = new Orange();
-        String expResult = "";
+        Orange instance = new Orange(12,"France");
+        String expResult = "France";
         String result = instance.getOrigine();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
@@ -94,10 +74,9 @@ public class OrangeTest extends FruitSimpleTest{
     @Test
     public void testSetOrigine() {
         System.out.println("setOrigine");
-        String origine = "";
-        Orange instance = new Orange();
+        String origine = "Angleterre";
+        Orange instance = new Orange(23,"");
         instance.setOrigine(origine);
-        // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
@@ -107,28 +86,28 @@ public class OrangeTest extends FruitSimpleTest{
     @Test
     public void testToString() {
         System.out.println("toString");
-        Orange instance = new Orange();
-        String expResult = "";
+        Orange instance = new Orange(0,"");
+        String expResult = "Orange de " + "" + " a " + 0 + " euros";
         String result = instance.toString();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
     /**
-     * Test of equals method, of class Orange.
+     * Test of equals method, of class Orange.   
      */
+    
     @Test
     public void testEquals() {
         System.out.println("equals");
         Object o = null;
-        Orange instance = new Orange();
+        Orange instance = new Orange(24,"Emirates");
         boolean expResult = false;
         boolean result = instance.equals(o);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
+
 
     /**
      * Test of isSeedless method, of class Orange.
@@ -136,11 +115,10 @@ public class OrangeTest extends FruitSimpleTest{
     @Test
     public void testIsSeedless() {
         System.out.println("isSeedless");
-        Orange instance = new Orange();
+        Orange instance = new Orange(23,"Ghana");
         boolean expResult = false;
         boolean result = instance.isSeedless();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
@@ -152,7 +130,6 @@ public class OrangeTest extends FruitSimpleTest{
         System.out.println("main");
         String[] args = null;
         Orange.main(args);
-        // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
     

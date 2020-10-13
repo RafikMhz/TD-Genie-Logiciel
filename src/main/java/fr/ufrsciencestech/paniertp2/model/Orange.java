@@ -4,27 +4,13 @@ package fr.ufrsciencestech.paniertp2.model;
  *
  * @author roudet
  */
-public class Orange implements Fruit{
+public class Orange extends FruitSimple{
     private double prix;
     private String origine;
-	
-    public Orange() 
-    {
-        this.prix = 0.5;  //prix en euros
-        this.origine="Espagne";
-    }
     
     public Orange(double prix, String origine) 
     {
-	if(prix < 0)
-	    this.prix = -prix;  //une solution possible pour interdire les prix negatifs
-	else
-	    this.prix = prix;
-
-	if(origine.equals(""))
-            this.origine = "Espagne";  //Espagne par défaut
-	else
-            this.origine = origine;   
+        super(prix, origine);
     }
 
     public double getPrix(){

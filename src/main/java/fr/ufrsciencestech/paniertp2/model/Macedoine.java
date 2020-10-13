@@ -6,15 +6,14 @@ public class Macedoine implements Fruit {
 
     private ArrayList<Fruit> fr;
     
-    public Macedoine(Fruit f1, Fruit f2) {
+    public Macedoine(Fruit f1) {
 
         // instanciation du tableau
         this.fr = new ArrayList<>();
 
         // ajoute dans la liste les fruits en parametre
-        if (f1 != null && f2 != null) {
+        if (f1 != null) {
             fr.add(f1);
-            fr.add(f2);
         } else {
             System.out.println("Besoin de deux fruits en parametre");
         }
@@ -55,7 +54,7 @@ public class Macedoine implements Fruit {
 
     @Override
     public double getPrix() {
-        return 0;
+        return fr;
     }
 
     @Override
